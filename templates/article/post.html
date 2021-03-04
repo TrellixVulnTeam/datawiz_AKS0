@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block context %}
+{% autoescape off %}
+
+<h1>{{ post.title }} </h1>
+<p>{{ post.body }}</p>
+<p>{{ post.author }} | {{ post.created }}</p>
+
+{% endautoescape %}
+
+{% endblock context %}
