@@ -1,1 +1,1 @@
-web: gunicorn rrcalculator.wsgi
+web: gunicorn blog.wsgi
