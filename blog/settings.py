@@ -37,9 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'article',
+    'account',
     'ckeditor',
     'ckeditor_uploader',
+    'rest_framework'
 ]
 
 
@@ -157,6 +160,13 @@ LOGGING = {
     },
 }
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
+    ]
+}
 
 # Configure Django App for Heroku.
 import django_heroku
